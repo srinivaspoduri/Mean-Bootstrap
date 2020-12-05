@@ -12,7 +12,7 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
 import { ProductsService } from 'src/services/Product.service';
 import { AppRoutingModule } from 'src/Routes/AppRouting.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
     FiltersComponent,
     ProductListComponent,
     CartComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    HomeComponent
       ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+      ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
 })
