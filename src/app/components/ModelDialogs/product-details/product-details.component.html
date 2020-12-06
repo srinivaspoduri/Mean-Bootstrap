@@ -1,37 +1,37 @@
 <div class='modal-content'>
-<div class="modal-header">
-	<h4 class="modal-title">Product Details</h4>
-	<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-</div>
-<div class="modal-body">
-	
-		
-		<div class="card-body">
+    <div class="modal-header">
+        <h4 class="modal-title">Product Details</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="card-body">
             <div><img class="card-img-top  img-circle" src="{{Product_Details.img}}" alt="Card image cap"></div>
             <div>
-			<p class="card-text"><b>category: </b>{{Product_Details.category}}</p>
-			<p class="card-text"><b>subcategory: </b>{{Product_Details.subcategory}}</p>
-			<p class="card-text"><b>Brand: </b>{{Product_Details.brand}}</p>
-			<p class="card-text"><b>Price: </b>{{Product_Details.price}}</p>
-			<p class="card-text"><b>Description: </b>{{Product_Details.price}}</p>
+                <p class="card-text"><b>category: </b>{{Product_Details.category}}</p>
+                <p class="card-text"><b>subcategory: </b>{{Product_Details.subcategory}}</p>
+                <p class="card-text"><b>Brand: </b>{{Product_Details.brand}}</p>
+                <p class="card-text"><b>Price: </b>{{Product_Details.price}}</p>
+                <p class="card-text"><b>Description: </b>{{Product_Details.price}}</p>
             </div>
         </div>
-	
-</div>
-<div class="modal-footer">
-	<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-</div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    </div>
 </div>
 <style>
-   .card-text
-   {
-       text-align: center;
-   }
-   img{
-    width: 180px;
-  height: 160px;
-justify-content: center;
-   }
+    .card-text {
+        text-align: center;
+    }
+
+    img {
+
+        height: 200px;
+
+        /*Scale down will take the necessary specified space that is 400px x 200px without stretching the image*/
+        object-fit: scale-down;
+        padding: none;
+    }
 </style>
