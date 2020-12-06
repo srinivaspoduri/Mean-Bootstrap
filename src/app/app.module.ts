@@ -14,6 +14,7 @@ import { AppRoutingModule } from 'src/Routes/AppRouting.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import{NgbModule}from '@ng-bootstrap/ng-bootstrap'
+import { NgHttpLoaderModule } from 'ng-http-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import{NgbModule}from '@ng-bootstrap/ng-bootstrap'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,NgbModule
+    HttpClientModule,NgbModule,NgHttpLoaderModule.forRoot()
       ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
