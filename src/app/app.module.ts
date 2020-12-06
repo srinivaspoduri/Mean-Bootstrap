@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import{NgbModule}from '@ng-bootstrap/ng-bootstrap'
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { ProductDetailsComponent } from './components/ModelDialogs/product-details/product-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     ProductListComponent,
     CartComponent,
     ProductItemComponent,
-    HomeComponent
+    HomeComponent,
+    ProductDetailsComponent
       ],
   imports: [
     BrowserModule,
