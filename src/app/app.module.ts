@@ -13,6 +13,7 @@ import { ProductsService } from 'src/services/Product.service';
 import { AppRoutingModule } from 'src/Routes/AppRouting.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import{NgbModule}from '@ng-bootstrap/ng-bootstrap'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule,NgbModule
       ],
   providers: [ProductsService],
   bootstrap: [AppComponent]
