@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from 'src/app/components/ModelDialogs/product-details/product-details.component';
 @Component({
@@ -11,7 +12,7 @@ export class ProductItemComponent implements OnInit {
   @Input()product_data:any;
 
   
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal,public router: Router) { }
 
   ngOnInit(): void {
    
@@ -21,5 +22,9 @@ open(datax:any)
   const modalRef=this.modalService.open(ProductDetailsComponent);
   modalRef.componentInstance.Product_Details=datax;
 }
-
+productdetails(datax:any)
+{
+  console.log(Object.values(datax));
+  this.router.navigate(['/productdetails/'], { queryParams: datax });
+}
 }

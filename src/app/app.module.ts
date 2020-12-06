@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import{NgbModule}from '@ng-bootstrap/ng-bootstrap'
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { ProductDetailsComponent } from './components/ModelDialogs/product-details/product-details.component';
+import { ProductdetailsComponent } from './components/shopping-cart/productdetails/productdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { ProductDetailsComponent } from './components/ModelDialogs/product-detai
     CartComponent,
     ProductItemComponent,
     HomeComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductdetailsComponent
       ],
   imports: [
     BrowserModule,

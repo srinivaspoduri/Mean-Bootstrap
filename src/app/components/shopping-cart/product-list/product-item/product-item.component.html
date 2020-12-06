@@ -1,7 +1,7 @@
 
 <div class="card mb-4 shadow-sm">
     <small class="text-muted"> {{product_data.brand}}  {{product_data.subcategory}} {{product_data.category}}</small>
-    <img class="bd-placeholder-img card-img-top"src="{{product_data.img}}"/>
+    <img class="bd-placeholder-img card-img-top"src="{{product_data.img}}" (click)="productdetails(product_data)"/>
   
     <div class="card-body">
         <p class="card-text"><small class="text-muted">{{product_data.price |currency:'INR'}}</small></p>
@@ -20,6 +20,7 @@
     height: 200px;
 
     /*Scale down will take the necessary specified space that is 400px x 200px without stretching the image*/
-    object-fit:scale-down
+    object-fit:scale-down;
+    cursor: pointer;
     }
 </style>
