@@ -7,3 +7,8 @@ body{
     width: 600px;
     height: 600px
 }
+
+.cdk-global-overlay-wrapper {
+    align-items: flex-start !important;
+    justify-content: flex-start !important
+  }

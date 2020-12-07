@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/shared/nav/nav.component';
@@ -18,7 +19,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
 import { ProductDetailsComponent } from './components/ModelDialogs/product-details/product-details.component';
 import { ProductdetailsComponent } from './components/shopping-cart/productdetails/productdetails.component';
 import { CartitemComponent } from './components/shopping-cart/cart/cartitem/cartitem.component';
-import { MessangerService } from 'src/services/messanger.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SnackBarService } from 'src/services/snack-bar.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,14 +35,17 @@ import { MessangerService } from 'src/services/messanger.service';
     HomeComponent,
     ProductDetailsComponent,
     ProductdetailsComponent,
-    CartitemComponent
+    CartitemComponent,
+   
       ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,NgbModule,NgHttpLoaderModule.forRoot()
+    HttpClientModule,NgbModule,NgHttpLoaderModule.forRoot(),
+    MatSnackBarModule,BrowserAnimationsModule
+
       ],
-  providers: [ProductsService,MessangerService],
+  providers: [ProductsService,SnackBarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

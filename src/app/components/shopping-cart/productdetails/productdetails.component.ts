@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessangerService } from 'src/services/messanger.service';
 import { ProductsService } from 'src/services/Product.service';
+import { SnackBarService } from 'src/services/snack-bar.service';
 
 @Component({
   selector: 'app-productdetails',
@@ -9,10 +11,11 @@ import { ProductsService } from 'src/services/Product.service';
 })
 export class ProductdetailsComponent implements OnInit {
 
+  addedtocart:boolean = false;
   selectedproductdetails: any;
   public showinGrid:any=[];
   ServerData: any;
-  constructor(public router: Router, public activeroute: ActivatedRoute, public productsservice: ProductsService) { }
+  constructor(public _snackbar:SnackBarService, public messangerservice:MessangerService, public router: Router, public activeroute: ActivatedRoute, public productsservice: ProductsService) { }
 
   ngOnInit(): void {
 
@@ -52,6 +55,13 @@ export class ProductdetailsComponent implements OnInit {
       this.selectedproductdetails = selectedproductdetails;
       console.log("****" + selectedproductdetails);
     })
+  }
+
+  handleAddToCart() {
+    this.addedtocart=false;
+    this.messangerservice.sendMsg(this.selectedproductdetails)
+    this._snackbar.openSnackBar("Added to Cart successfully","X")
+    this.addedtocart=true;
   }
 }
 
