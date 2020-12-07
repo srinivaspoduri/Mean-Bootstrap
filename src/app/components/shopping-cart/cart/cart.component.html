@@ -1,5 +1,9 @@
 <div class="container">
-<div class="row">Shopping Cart</div>
+    <div class="row">
+        <div class="col-md-10">Shopping Cart</div>
+        <div class="col">Items ({{cartItems.length}})</div>
+    </div>
+
     <div *ngIf="cartItems.length=== 0" class="alert alert-info">Your Cart is empty</div>
     <ul *ngIf="cartItems.length > 0" class="list-group">
         <li class="list-group-item" *ngFor="let item of cartItems">
