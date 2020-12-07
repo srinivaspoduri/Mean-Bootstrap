@@ -1,19 +1,27 @@
-
-<div class="row-md-4">
-    <div class="col">
-        <ul>
-            <li>
-                <strong>Brand:{{cartitem.brand}}</strong>
-            </li>
-            <li>
-                <strong>Price:{{cartitem.price}}</strong>
-            </li>
-            <li>
-                <strong>Quantity: {{cartitem.quantity}}</strong>
-            </li>
-            <li>
-                <strong>Product ID: {{cartitem.id}}</strong>
-            </li>
-        </ul>
+<div class="row justify-content-md-center">
+<div class="col-md-8">
+    <div class="row">
+        <div class="col">
+            <img src="{{cartitem.img}}"/>
+        </div>
+        <div class="col">
+            <p>Product Details</p>
+            <small>{{cartitem.brand}}</small>
+            <small>{{cartitem.catagory}}</small>
+        </div>
+        <div class="col">
+        <p>{{cartitem.price |currency:'INR'}}</p>
+    </div>
     </div>
 </div>
+
+</div>
+<style>
+    img{
+        
+    height: 100px;
+
+    /*Scale down will take the necessary specified space that is 400px x 200px without stretching the image*/
+    object-fit:scale-down;
+    }
+</style>

@@ -1,6 +1,16 @@
-<div *ngIf="cartItems.length=== 0" class="alert alert-info">Your Cart is empty</div>
-<ul *ngIf ="cartItems.length > 0" class="list-group" >
-<li class="list-group-item" *ngFor="let item of cartItems">
-    <app-cartitem [cartitem]="item"></app-cartitem>
-</li>
-</ul>
+<div class="container">
+<div class="row">Shopping Cart</div>
+    <div *ngIf="cartItems.length=== 0" class="alert alert-info">Your Cart is empty</div>
+    <ul *ngIf="cartItems.length > 0" class="list-group">
+        <li class="list-group-item" *ngFor="let item of cartItems">
+            <app-cartitem [cartitem]="item"></app-cartitem>
+        </li>
+    </ul>
+</div>
+<style>
+    .row{
+        font-size: 25px;
+        color: darkgreen;
+        font-family: bold;
+    }
+</style>
