@@ -17,6 +17,8 @@ import{NgbModule}from '@ng-bootstrap/ng-bootstrap'
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { ProductDetailsComponent } from './components/ModelDialogs/product-details/product-details.component';
 import { ProductdetailsComponent } from './components/shopping-cart/productdetails/productdetails.component';
+import { CartitemComponent } from './components/shopping-cart/cart/cartitem/cartitem.component';
+import { MessangerService } from 'src/services/messanger.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +32,15 @@ import { ProductdetailsComponent } from './components/shopping-cart/productdetai
     ProductItemComponent,
     HomeComponent,
     ProductDetailsComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    CartitemComponent
       ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,NgbModule,NgHttpLoaderModule.forRoot()
       ],
-  providers: [ProductsService],
+  providers: [ProductsService,MessangerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

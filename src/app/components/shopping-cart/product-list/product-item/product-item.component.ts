@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProductDetailsComponent } from 'src/app/components/ModelDialogs/product-details/product-details.component';
+import { MessangerService } from 'src/services/messanger.service';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -12,7 +13,7 @@ export class ProductItemComponent implements OnInit {
   @Input()product_data:any;
 
   
-  constructor(private modalService: NgbModal,public router: Router) { }
+  constructor(private modalService: NgbModal,public router: Router,private messangerservice:MessangerService) { }
 
   ngOnInit(): void {
    
@@ -26,5 +27,8 @@ productdetails(datax:any)
 {
   console.log(Object.values(datax));
   this.router.navigate(['/productdetails/'], { queryParams: datax });
+}
+handleAddToCart(){
+this.messangerservice.sendMsg(this.product_data)  
 }
 }
