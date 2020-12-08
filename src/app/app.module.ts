@@ -21,6 +21,17 @@ import { ProductdetailsComponent } from './components/shopping-cart/productdetai
 import { CartitemComponent } from './components/shopping-cart/cart/cartitem/cartitem.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SnackBarService } from 'src/services/snack-bar.service';
+import { LoginComponent } from './components/login/login.component';
+import { LoginService } from 'src/services/login.service';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,16 +47,19 @@ import { SnackBarService } from 'src/services/snack-bar.service';
     ProductDetailsComponent,
     ProductdetailsComponent,
     CartitemComponent,
+    LoginComponent
+    
    
       ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,NgbModule,NgHttpLoaderModule.forRoot(),
-    MatSnackBarModule,BrowserAnimationsModule
+    MatSnackBarModule,BrowserAnimationsModule,MatFormFieldModule,
+    FormsModule,ReactiveFormsModule,MatInputModule,FlexLayoutModule,MatCardModule
 
       ],
-  providers: [ProductsService,SnackBarService],
+  providers: [ProductsService,SnackBarService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

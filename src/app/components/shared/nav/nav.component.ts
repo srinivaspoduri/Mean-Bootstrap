@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+import { ProductsService } from 'src/services/Product.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(public router:Router) { }
 
   ngOnInit(): void {
   }
-
-}
+    
+  }
