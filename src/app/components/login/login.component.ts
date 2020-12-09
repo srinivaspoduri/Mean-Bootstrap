@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl ,FormGroup, Validators,FormBuilder,FormControl,FormsModule }  from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router,NavigationStart } from '@angular/router';
 import { LoginService } from 'src/services/login.service';
 
 
@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     private _activatedRoute: ActivatedRoute,
     public _loginService:LoginService,
     private formBuilder: FormBuilder,
+    
     ) {   
 
       this.loginForm = new FormGroup({
@@ -29,6 +30,13 @@ export class LoginComponent implements OnInit {
      
   
   ngOnInit(): void {
+    this.router.events.forEach((event) => {
+      if (event instanceof NavigationStart) {
+        if (event['url'] == '/login') {
+           localStorage.removeItem("token");
+        } else {  }
+      }
+    });
     
 } 
   

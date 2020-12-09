@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 160px;
-
+    
     /* background-color:white;
     box-shadow:0 5px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -15,9 +15,9 @@
     }
     .container > form{
     background-color:white;
-    box-shadow:0 5px 10px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 25px;
+    
+    border-radius: 0px;
+    padding: 20px;
     width: 390px;
     min-height: 200px;
 }
@@ -27,3 +27,8 @@
     margin-bottom: 30px;      
 }
 
+input:focus { 
+    outline: none !important;
+    border-color: orange;
+    box-shadow: 0 0 10px 0px orange;
+}
