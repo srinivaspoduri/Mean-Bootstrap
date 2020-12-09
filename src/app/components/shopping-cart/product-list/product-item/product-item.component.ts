@@ -18,11 +18,7 @@ export class ProductItemComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.messangerservice.getMsg().subscribe((addeddata:any)=>{
-
-      
-    }
-    );
+  
 
   }
   open(datax: any) {
