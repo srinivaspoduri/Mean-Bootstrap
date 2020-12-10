@@ -17,7 +17,7 @@ export class LoginService {
   };
 
   login(body:any):Observable<any>{
-    console.log("In Service"+body);
+    console.log("In Service"+JSON.stringify(body));
     return this._http.post(BASE_URL+'login' ,body,this.httpOptions);
   }
 

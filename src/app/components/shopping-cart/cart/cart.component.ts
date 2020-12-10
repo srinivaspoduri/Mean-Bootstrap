@@ -11,12 +11,14 @@ export class CartComponent implements OnInit {
   constructor(private messangerservice:MessangerService) { }
 
   ngOnInit() {
-    this.messangerservice.getMsg("srinu").subscribe((savedcartdata:any)=>{
+    this.messangerservice.getMsg("jhansi").subscribe((savedcartdata:any)=>{
 
       console.log("saved cart data is "+JSON.stringify(savedcartdata))
+      this.cartItems=savedcartdata.cartitems[0].products;
+      console.log("in CART component" +JSON.stringify(this.cartItems))
     }
     );
-   this.cartItems=this.messangerservice.servicecartItems;
+  // this.cartItems=this.messangerservice.servicecartItems;
   }
 
 }

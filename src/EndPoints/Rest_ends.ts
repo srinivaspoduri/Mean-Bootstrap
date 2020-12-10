@@ -1,2 +1,2 @@
-const BASE_URL:string ="https://my-mean-server1.herokuapp.com/";
+const BASE_URL:string ="http://localhost:8080/";
 export default BASE_URL;
