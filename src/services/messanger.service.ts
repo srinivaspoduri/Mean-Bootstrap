@@ -18,6 +18,7 @@ export class MessangerService {
 
     console.log("in send MSG" +JSON.stringify(product));
     let productexists = false;
+    product.quantity = 1
     this._httpclient.post(BASE_URL+"addToCart",{username:'jhansi',product:product},this.httpOptions).subscribe(cartstatus=>{
 
       console.log(cartstatus)
